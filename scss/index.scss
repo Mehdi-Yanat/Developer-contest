@@ -1,0 +1,268 @@
+@import "config";
+@import "fonts";
+:root{
+    --white-color :#fff;
+    --black-color : #000;
+    --gold-color:#fdb219;
+    --blue-dark-color:#001c44;
+    --h1-h3-font-font-family: 'Quicksand', sans-serif;
+    --h2-p-a-font-font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+header{
+    background-image: url(/images/DCImages/bg.jpg);
+    background-size: cover ;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    .overlay{
+        background-color: var(--black-color);
+        position: absolute;
+        opacity: 0.85;
+        width: 100%;
+        height: 100%;
+    }
+    nav{
+        h1{
+            font-family: var(--h1-h3-font-font-family);
+            font-size: 1.5rem;
+        }
+        h3{
+            font-family: var(--h2-p-a-font-font-family);
+            font-size: 1.5rem;
+        }
+        z-index: 2;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        .logo{
+            display: none;
+        }
+        .phone-call{
+            display: none;
+        }
+      
+        .all-btn{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 50px;
+            .btn-login{
+                display: flex;
+                background-color: var(--white-color);
+                padding: 15px 30px;
+                border-radius: 50px ;
+                h3{
+                   
+                    color: var(--black-color);
+                }
+            }
+            .Menu-Btn{
+                width: 64px;
+                height: 64px;
+                z-index: 100;
+                background-image: url(/img/icons/hamburger.png);
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    .text-main{
+        padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 90%;
+            gap: 15px;
+            
+                h2{
+                    font-size: 2rem ;
+                    color: var(--black-color);
+                }
+                
+    }
+    .container-fluid-grid{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .grid{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: 50% 50% ;
+            gap: 5px;
+            .box{
+                
+                width: 100%;
+                height: 200px;
+                margin-top: 5px;
+                .box1{
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    gap: 15px;
+                    .img{
+                        img{
+                        box-shadow: 0px 0px 10px rgba(0,0,0 ,0.7) ;
+                         width: 100%;
+                         height: 150px;
+                        }
+                     }
+                }
+                .box1:hover{
+                    transition: 0.5s ease;
+
+                    transform: scale(1.2);
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    header{
+        background-image: url(/images/DCImages/bg.jpg);
+        background-size: cover ;
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        .overlay{
+            background-color: var(--black-color);
+            position: absolute;
+            opacity: 0.85;
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            z-index: 2;
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            .logo{
+                display: block;
+            }
+            .phone-call{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                height: 100%;
+               
+                .call-icone img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .all-btn{
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+               
+                .btn-login{
+
+                  
+                    padding: 5px 5px;
+                    background-color: var(--white-color);
+                    border-radius: 100px ;
+                    h3{
+                         font-family: var(--h1-h3-font-font-family);
+                        color: var(--black-color);
+                    }
+                }
+                .Menu-Btn{
+                    width: 35px;
+                    height: 35px;
+                    background-image: url(/img/icons/hamburger.png);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        .text-main{
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 90%;
+            gap: 15px;
+            
+                h2{
+                    font-size: 2rem ;
+                    color: var(--black-color);
+                }
+        
+        }
+        .container-fluid-grid{
+          
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .grid{
+                display: grid;
+               
+                align-items: center;
+                justify-content: center;
+                grid-template-columns: 25% 25% 25% 25% ;
+                gap: 10px;
+                .box{
+                    
+                    width: 100%;
+                    height: 200px;
+                    margin-top: 5px;
+                    .box1{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        
+                        .img{
+                            img{
+                             width: 70%;
+                             height: 150px;
+                            }
+                         }
+                    }
+    
+                }
+            }
+        }
+    }
+    
+}
+
